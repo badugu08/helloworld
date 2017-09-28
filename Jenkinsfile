@@ -6,9 +6,21 @@ node {
 	  //git url: 'https://github.com/raghupss/-java-mvn-hello-world-web-app.git'
   	echo 'hello from checkout'
     }
-    stage('Build') {
+	 stage('Static Code Analysis') {
+         mvn 'validate'
+    }
+         stage('Compile') {
+         mvn 'compile'
+    }
+	stage('Test') {
+         mvn 'test'
+    }
+	
+	stage('Build') {
         mvn 'package'
     }
+	
+	
 }
 
    def mvn(def args) {
