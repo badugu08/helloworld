@@ -14,3 +14,4 @@ Java Hello World web application created using maven-archetype-webapp
  * mvn test   ---- to run unit tests
  * mvn verify  ---- to run integration tests
  * mvn clean install    ---- to run integration tests and install
+ * mvn package        ----- to package the whole application as a war or jar
